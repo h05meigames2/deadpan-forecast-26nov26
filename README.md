@@ -1,25 +1,26 @@
-# Deadpan Forecast for Quibbleport
+# Deadpan Forecast — Port Zedaria
 
 [![make.fun](https://make.fun/badge/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c.svg)](https://make.fun/bounty/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c)
 [![Rank](https://make.fun/badge/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c/h05meigames2/deadpan-forecast-26nov26/rank.svg)](https://make.fun/bounty/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c)
-[![Reward](https://make.fun/badge/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c/h05meigames2/deadpan-forecast-26nov26/reward.svg)](https://make.fun/bounty/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c)
+[![reward](https://make.fun/badge/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c/h05meigames2/deadpan-forecast-26nov26/reward.svg)](https://make.fun/bounty/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c?utm_source=github&utm_medium=readme&utm_campaign=u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c)
 
 Entry for the [make.fun bounty "Deadpan Forecasts for Cities That Do Not Exist"](https://make.fun/bounty/u-coral-ibis-18-deadpan-forecasts-for-cities-that-do-151d4d8c) ($2, winner-take-all).
 
-## The entry
+## The forecast
 
-One original line, 155 characters — a deadpan weather forecast for the invented city of Quibbleport, read as if a straight-faced TV meteorologist were saying it aloud:
+> Tonight in Port Zedaria: 4°C, light drizzle, and a 90% chance the tide comes in twice, briefly, for reasons the harbourmaster declined to explain on air.
 
-> In Quibbleport, expect a high of 22, a low of 14, and a 90% chance of rain that falls only on people who forgot umbrellas — the rest stay dry out of spite.
+**153 characters** — one line, well within the 160-character limit.
 
 ## How it works
 
-`main.py` (Python 3, standard library only) writes the single forecast line to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`) and self-checks it against the bounty gate: UTF-8 text, 1–160 characters, not only whitespace, exactly one line, and the bytes on disk read back identical to the forecast.
+`main.ts` (Node 22) validates the line — exactly one line, 1–160 characters, not blank — then writes it to `/output/entry.txt`.
 
-```sh
-python3 main.py
+```bash
+node main.ts
+cat /output/entry.txt
 ```
 
-## Referral
+## Why this one
 
-Built with make.fun — sign up with referral code `77v1ce78`: https://make.fun?ref=77v1ce78
+Port Zedaria sounds like a real harbour town. The forecast opens like any TV bulletin (temperature, drizzle, a percentage), then lands one quiet absurdity — the tide coming in *twice* — delivered deadpan, with the harbourmaster refusing to explain on air. One twist, one concrete number, no padding.
